@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include "Form.hpp"
 
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
@@ -26,6 +27,7 @@ class Bureaucrat
 		~Bureaucrat();
 		const std::string& getName() const;
 		int getGrade() const;
+		void signForm(Form& form);
 
 		class GradeTooHighException: public std::exception
 		{
