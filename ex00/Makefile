@@ -18,6 +18,12 @@ clean:
 fclean: clean
 	rm $(NAME)
 
-re:fclean all
+re: fclean all
 
-.PHONY: all clean fclean re
+frun: all
+	@printf "\n========== START TEST ==========\n\n"
+	./$(NAME)
+	@printf "\n========== END TEST ==========\n"
+	@$(MAKE) --no-print-directory fclean > /dev/null
+
+.PHONY: all clean fclean re frun
