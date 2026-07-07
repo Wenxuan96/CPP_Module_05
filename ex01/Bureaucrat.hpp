@@ -13,11 +13,13 @@
 #define CYAN    "\033[36m"
 #define WHITE   "\033[37m"
 
+class Form;
+
 class Bureaucrat
 {
 	private:
-		const std::string name;
-		int				  grade;
+		const std::string _name;
+		int				  _grade;
 	
 	public:
 		Bureaucrat();
@@ -27,6 +29,8 @@ class Bureaucrat
 		~Bureaucrat();
 		const std::string& getName() const;
 		int getGrade() const;
+		void incrementGrade();
+		void decrementGrade();
 		void signForm(Form& form);
 
 		class GradeTooHighException: public std::exception

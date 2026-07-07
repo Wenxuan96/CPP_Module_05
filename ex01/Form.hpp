@@ -1,11 +1,14 @@
+#pragma once
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
 	private:
 		const std::string	_name;
 		bool				_isSigned;
-		const int			_gradeToSign;
+		const int			_signedGrade;
 		const int			_gradeToExecute;
 	
 	public:
@@ -15,6 +18,10 @@ class Form
 		Form& operator=(const Form& other);
 		~Form();
 		void beSigned(const Bureaucrat& member);
+		const int& getSignedGrade() const;
+		const int& getGradeToExecute() const;
+		const std::string& getName() const;
+		const bool& getIsSigned() const;
 	
 		class GradeTooHighException: public std::exception
 		{
