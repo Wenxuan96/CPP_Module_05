@@ -101,7 +101,7 @@ static void testSignForm()
 	prtLine("Test Sign Form");
 	try
 	{
-		Bureaucrat a("Abbey", 12);
+		Bureaucrat a("Abbey", 1);
 		std::cout << a;
 		Form b("Blair", 1);
 		std::cout << b;

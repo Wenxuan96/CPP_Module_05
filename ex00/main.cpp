@@ -95,6 +95,43 @@ static void testInvalidGrades()
 	}
 }
 
+static void testIncremantGrades()
+{
+	prtLine("Test Incremant Grades");
+	try
+	{
+		Bureaucrat a("Abbey", 12);
+		for (int i = 0; i < 12; i++)
+		{
+			a.incrementGrade();
+			std::cout << a;
+		}
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << RED << e.what() << RESET << '\n';
+	}
+}
+
+
+static void testDecremantGrades()
+{
+	prtLine("Test Decremant Grades");
+	try
+	{
+		Bureaucrat a("Abbey", 135);
+		for (int i = 0; i < 20; i++)
+		{
+			a.decrementGrade();
+			std::cout << a;
+		}
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << RED << e.what() << RESET << '\n';
+	}
+}
+
 int main(void)
 {
 	testDefaultConstructor();
@@ -102,6 +139,8 @@ int main(void)
     testCopyConstructor();
     testAssignmentOperator();
     testInvalidGrades();
+	testIncremantGrades();
+	testDecremantGrades();
 
 	return 0;
 }
