@@ -32,15 +32,18 @@ void ShrubberyCreationForm::executeAction() const
 	if (!file.is_open())
 		throw std::runtime_error("Could not create shrubbery file.");
 
-	file << "        _-_\n";
-	file << "     /~~   ~~\\\n";
-	file << "  /~~         ~~\\\n";
-	file << " {               }\n";
-	file << "  \\  _-     -_  /\n";
-	file << "    ~  \\\\ //  ~\n";
-	file << " _- -   | | _- _\n";
-	file << "   _ -  | |   -_\n";
-	file << "       // \\\\\n";
+	file << "          &&& &&  & &&\n";
+	file << "      && &\\/&\\|& ()|/ @, &&\n";
+	file << "      &\\/(/&/&||/& /_/)_&/_&\n";
+	file << "   &() &\\/&|()|/&\\/ '%\" & \\() \n";
+	file << "  &_\\_&&_\\ |& |&&/&__%_/_& &&\n";
+	file << "&&   && & &| &| /& & % ()& /&&\n";
+	file << " ()&_---()&\\&\\|&&-&&--%---()~\n";
+	file << "     &&     \\|||\n";
+	file << "             |||\n";
+	file << "             |||\n";
+	file << "             |||\n";
+	file << "       , -=-~  .-^-\n";
 
 	file.close();
 }
